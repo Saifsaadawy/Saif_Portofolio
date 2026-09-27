@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Saifallah Ehab Ibrahim — Software Engineer &amp; AI Engineer</title>
+<meta name="description" content="Portfolio of Saifallah Ehab Ibrahim — Junior Software Engineer, Web Developer and AI Engineer. Projects, skills, education and experience." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts: Space Grotesk for display/headings, Inter for body text -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Scroll progress indicator -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom cursor (desktop only, added/controlled via JS) -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner container">
+    <a href="#home" class="navbar__logo">Saif<span>allah</span></a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#home" class="nav-link active-link" data-nav>Home</a>
+      <a href="#about" class="nav-link" data-nav>About</a>
+      <a href="#skills" class="nav-link" data-nav>Skills</a>
+      <a href="#projects" class="nav-link" data-nav>Projects</a>
+      <a href="#education" class="nav-link" data-nav>Education</a>
+      <a href="#experience" class="nav-link" data-nav>Experience</a>
+      <a href="#certifications" class="nav-link" data-nav>Certifications</a>
+      <a href="#contact" class="nav-link" data-nav>Contact</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <!-- Light/Dark theme toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu__links">
+    <a href="#home" data-nav>Home</a>
+    <a href="#about" data-nav>About</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#projects" data-nav>Projects</a>
+    <a href="#education" data-nav>Education</a>
+    <a href="#experience" data-nav>Experience</a>
+    <a href="#certifications" data-nav>Certifications</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__blob hero__blob--1" data-parallax="0.15"></div>
+      <div class="hero__blob hero__blob--2" data-parallax="0.25"></div>
+      <div class="hero__grid"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__content reveal" data-reveal="left">
+        <p class="hero__kicker">— Hi, my name is</p>
+        <h1 class="hero__name">Saifallah Ehab Ibrahim</h1>
+        <h2 class="hero__role">
+          I'm a <span class="typing" id="typingText"></span><span class="typing-cursor">|</span>
+        </h2>
+        <p class="hero__intro">
+          Third-year Artificial Intelligence student and full-stack developer who enjoys turning
+          hard problems into working software — from web applications to intelligent systems that
+          learn from data. Currently building my skills toward a career as an AI Engineer.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">View My Projects</a>
+          <a href="#contact" class="btn btn--ghost">Contact Me</a>
+        </div>
+
+        <div class="hero__socials">
+          <!-- Replace # with your real profile URLs -->
+          <a href="https://github.com/Saifsaadawy" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/saif-saadawi" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="hero__photo-wrap reveal" data-reveal="right">
+        <div class="hero__photo-frame">
+          <!--
+            PHOTO CUSTOMIZATION:
+            Place your photo at assets/images/profile.jpg (recommended size: 800x800px, square).
+            The frame below will crop and display it automatically — no code changes needed.
+          -->
+          <img src="assets/images/profile.png" alt="Portrait of Saifallah Ehab Ibrahim" class="hero__photo" onerror="this.parentElement.classList.add('no-photo')">
+          <div class="hero__photo-placeholder">
+            <i class="fa-solid fa-user"></i>
+            <span>/
+              assets/images/profile.png</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__head reveal" data-reveal="up">
+        <p class="section__kicker">— About</p>
+        <h2 class="section__title">A student building real things, not just studying theory</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text reveal" data-reveal="up">
+          <!-- EDIT: update this paragraph with your own story any time -->
+          <p>
+            I'm a Computer Science and Artificial Intelligence student at Capital University,
+            Faculty of Computer Science and Artificial Intelligence, specializing in Artificial
+            Intelligence. My interest in this field comes from wanting to understand how
+            software can reason, learn and adapt — and from enjoying the process of building
+            that software myself.
+          </p>
+          <p>
+            Alongside my studies, I work as a full-stack developer, which keeps my AI work
+            grounded in real, usable applications rather than isolated experiments. I'm
+            comfortable across the stack — from designing interfaces to building the backend
+            logic and data pipelines that support them.
+          </p>
+          <p>
+            My goal is to grow into an AI Engineer role where I can design and ship intelligent
+            systems end-to-end: from data and model, to a product people actually use.
+          </p>
+
+          <a href="assets/files/Saifallah_Ehab_CV.pdf" class="btn btn--primary" download>
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+        </div>
+
+        <div class="about__stats reveal" data-reveal="up">
+          <div class="stat-card">
+            <span class="stat-card__num">3rd</span>
+            <span class="stat-card__label">Year, AI specialization</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">2028</span>
+            <span class="stat-card__label">Expected graduation</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">8+</span>
+            <span class="stat-card__label">Languages &amp; tools used</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <div class="section__head reveal" data-reveal="up">
+        <p class="section__kicker">— Skills</p>
+        <h2 class="section__title">Technical skills</h2>
+      </div>
+
+      <!--
+        SKILLS CUSTOMIZATION:
+        Each .skill-bar has a data-level="0-100" attribute — change the number to adjust
+        the animated fill percentage. Add or remove .skill-bar elements freely.
+      -->
+      <div class="skills__grid">
+
+        <div class="skill-category reveal" data-reveal="up">
+          <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
+          <div class="skill-bar" data-level="85"><div class="skill-bar__head"><span>Python</span><span class="skill-bar__pct">85%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="60"><div class="skill-bar__head"><span>Java</span><span class="skill-bar__pct">70%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="80"><div class="skill-bar__head"><span>JavaScript</span><span class="skill-bar__pct">80%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="90"><div class="skill-bar__head"><span>HTML5</span><span class="skill-bar__pct">90%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="85"><div class="skill-bar__head"><span>CSS3</span><span class="skill-bar__pct">85%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="75"><div class="skill-bar__head"><span>SQL</span><span class="skill-bar__pct">75%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+        </div>
+
+        <div class="skill-category reveal" data-reveal="up">
+          <h3><i class="fa-solid fa-globe"></i> Web Development</h3>
+          <div class="skill-bar" data-level="80"><div class="skill-bar__head"><span>Front-End Development</span><span class="skill-bar__pct">80%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="75"><div class="skill-bar__head"><span>Back-End Development</span><span class="skill-bar__pct">75%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="85"><div class="skill-bar__head"><span>Responsive Web Design</span><span class="skill-bar__pct">85%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="70"><div class="skill-bar__head"><span>Flask</span><span class="skill-bar__pct">70%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="50"><div class="skill-bar__head"><span>REST APIs</span><span class="skill-bar__pct">70%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+        </div>
+
+        <div class="skill-category reveal" data-reveal="up">
+          <h3><i class="fa-solid fa-brain"></i> Artificial Intelligence</h3>
+          <div class="skill-bar" data-level="70"><div class="skill-bar__head"><span>Machine Learning</span><span class="skill-bar__pct">70%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="65"><div class="skill-bar__head"><span>Deep Learning</span><span class="skill-bar__pct">65%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="65"><div class="skill-bar__head"><span>Artificial Intelligence</span><span class="skill-bar__pct">65%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="60"><div class="skill-bar__head"><span>Data Science</span><span class="skill-bar__pct">60%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+        </div>
+
+        <div class="skill-category reveal" data-reveal="up">
+          <h3><i class="fa-solid fa-toolbox"></i> Tools &amp; Technologies</h3>
+          <div class="skill-bar" data-level="85"><div class="skill-bar__head"><span>Git</span><span class="skill-bar__pct">85%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="85"><div class="skill-bar__head"><span>GitHub</span><span class="skill-bar__pct">85%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="90"><div class="skill-bar__head"><span>VS Code</span><span class="skill-bar__pct">90%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="65"><div class="skill-bar__head"><span>SQL Server</span><span class="skill-bar__pct">65%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+          <div class="skill-bar" data-level="60"><div class="skill-bar__head"><span>Docker</span><span class="skill-bar__pct">60%</span></div><div class="skill-bar__track"><div class="skill-bar__fill"></div></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__head reveal" data-reveal="up">
+        <p class="section__kicker">— Projects</p>
+        <h2 class="section__title">Selected work</h2>
+      </div>
+
+      <!-- Project filter -->
+      <div class="filter-bar reveal" data-reveal="up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="systems">Systems</button>
+      </div>
+
+      <!--
+        PROJECTS CUSTOMIZATION:
+        Duplicate a .project-card block to add a project. Set data-category to
+        "ai", "web" or "systems" so it works with the filter above.
+        Replace thumbnail images in assets/images/. If you don't have a GitHub
+        or live demo link yet, delete that <a> button rather than leaving a fake URL.
+      -->
+      <div class="projects__grid">
+
+        <article class="project-card reveal" data-reveal="up" data-category="ai">
+          <div class="project-card__image">
+            <img src="assets/images/project-jarvis.jpg" alt="Jarvis personal AI assistant project" onerror="this.parentElement.classList.add('no-photo')">
+            <div class="project-card__placeholder"><i class="fa-solid fa-image"></i></div>
+          </div>
+          <div class="project-card__body">
+            <h3>Personal AI Assistant — Jarvis</h3>
+            <p>A personal AI assistant project designed to support voice interactions, automation, and intelligent task execution.</p>
+            <div class="tag-list">
+              <span class="tag">Python</span><span class="tag">AI</span><span class="tag">Automation</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="#" target="_blank" rel="noopener" class="btn-icon"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="#" target="_blank" rel="noopener" class="btn-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-reveal="up" data-category="systems">
+          <div class="project-card__image">
+            <img src="assets/images/project-hotel.jpg" alt="Hotel reservation system project" onerror="this.parentElement.classList.add('no-photo')">
+            <div class="project-card__placeholder"><i class="fa-solid fa-image"></i></div>
+          </div>
+          <div class="project-card__body">
+            <h3>Hotel Reservation System</h3>
+            <p>A reservation management system for handling hotel bookings and related operations.</p>
+            <div class="tag-list">
+              <span class="tag">Java</span><span class="tag">SQL</span><span class="tag">Systems</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/Saifsaadawy/Hotel_Reservation_System" target="_blank" rel="noopener" class="btn-icon"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-reveal="up" data-category="systems">
+          <div class="project-card__image">
+            <img src="assets/images/project-cafe.jpg" alt="Cafe cashier system project" onerror="this.parentElement.classList.add('no-photo')">
+            <div class="project-card__placeholder"><i class="fa-solid fa-image"></i></div>
+          </div>
+          <div class="project-card__body">
+            <h3>Job Landing Page</h3>
+            <p>A modern, responsive landing page for a job portal website.</p>
+            <div class="tag-list">
+              <span class="tag">Flash</span><span class="tag">HTML</span><span class="tag">CSS</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/Saifsaadawy/Job-landing-page/tree/main/job-landing-page" target="_blank" rel="noopener" class="btn-icon"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-reveal="up" data-category="web">
+          <div class="project-card__image">
+            <img src="assets/images/project-p2p.jpg" alt="Peer-to-peer website project" onerror="this.parentElement.classList.add('no-photo')">
+            <div class="project-card__placeholder"><i class="fa-solid fa-image"></i></div>
+          </div>
+          <div class="project-card__body">
+            <h3>Peer-to-Peer Website</h3>
+            <p>A web project demonstrating front-end and back-end development.</p>
+            <div class="tag-list">
+              <span class="tag">JavaScript</span><span class="tag">php</span><span class="tag">Web</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/Saifsaadawy/P2P-Tool-Library" target="_blank" rel="noopener" class="btn-icon"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-reveal="up" data-category="web">
+          <div class="project-card__image">
+            <img src="assets/images/project-p2p.jpg" alt="Peer-to-peer website project" onerror="this.parentElement.classList.add('no-photo')">
+            <div class="project-card__placeholder"><i class="fa-solid fa-image"></i></div>
+          </div>
+          <div class="project-card__body">
+            <h3>Max-Product-of-3-Numbers-Recursive-vs-Non-Recursive</h3>
+            <p>A Python project that implements and compares two algorithms for finding the maximum product of any triplet in an array — Iterative (O(n²)) vs Recursive (O(n³)).</p>
+            <div class="tag-list">
+              <span class="tag">Python</span><span class="tag">Algorithm</span><span class="tag">app</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/Saifsaadawy/Max-Product-of-3-Numbers-Recursive-vs-Non-Recursive" target="_blank" rel="noopener" class="btn-icon"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-reveal="up" data-category="web">
+          <div class="project-card__image">
+            <img src="assets/images/project-p2p.jpg" alt="Peer-to-peer website project" onerror="this.parentElement.classList.add('no-photo')">
+            <div class="project-card__placeholder"><i class="fa-solid fa-image"></i></div>
+          </div>
+          <div class="project-card__body">
+            <h3>Priority-vs-SRTF-Scheduling-Comparison-Project</h3>
+            <p>A desktop application that simulates and compares Priority Preemptive and SRTF scheduling algorithms — with Gantt charts, statistics, and side-by-side analysis.</p>
+            <div class="tag-list">
+              <span class="tag">Python</span><span class="tag">Algorithm</span><span class="tag">app</span>
+            </div>
+            <div class="project-card__actions">
+              <a href="https://github.com/Saifsaadawy/Priority-vs-SRTF-Scheduling-Comparison-Project" target="_blank" rel="noopener" class="btn-icon"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section section--alt" id="education">
+    <div class="container">
+      <div class="section__head reveal" data-reveal="up">
+        <p class="section__kicker">— Education</p>
+        <h2 class="section__title">Academic background</h2>
+      </div>
+
+      <!-- EDIT: update year / GPA / details below as they change -->
+      <div class="timeline">
+        <div class="timeline__item reveal" data-reveal="up">
+          <div class="timeline__dot">1</div>
+          <div class="timeline__content">
+            <span class="timeline__date">2024 — 2028 (Expected)</span>
+            <h3>B.Sc. in Artificial Intelligence</h3>
+            <p class="timeline__org">Capital University — Faculty of Computer Science and Artificial Intelligence</p>
+            <p>Specialization: Artificial Intelligence. Coursework spans machine learning, data
+              structures, software engineering and applied mathematics.</p>
+            <!-- Optional: <p class="timeline__extra">GPA: X.XX / 4.00</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section__head reveal" data-reveal="up">
+        <p class="section__kicker">— Experience</p>
+        <h2 class="section__title">Work experience</h2>
+      </div>
+
+      <!--
+        EXPERIENCE CUSTOMIZATION:
+        This is sample placeholder content — replace with your real roles,
+        or remove this block entirely if you don't have work experience yet.
+      -->
+      <div class="timeline">
+        <div class="timeline__item reveal" data-reveal="up">
+          <div class="timeline__dot"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="timeline__content">
+            <span class="timeline__badge">Sample content — replace me</span>
+            <span class="timeline__date">20th Sep 2026 — present</span>
+            <h3>Freelance Frontend Developer</h3>
+            <p class="timeline__org">DebugZ</p>
+            <ul>
+              <li>Build interactive user interfaces with a focus on usability, accessibility, and performance.
+                  Implement modern website layouts and animations to create engaging user experiences.
+                  Ensure websites work smoothly across different devices, screen sizes, and browsers.
+                  Collaborate with clients to understand their requirements and turn ideas into functional web solutions.
+                  Maintain, test, and troubleshoot websites to improve functionality and user experience.</li>
+              <li>Contributed to developing and delivering web solutions tailored to client needs.
+                  Built responsive web interfaces that provide a consistent experience across desktop and mobile devices.
+                  Strengthened practical skills in front-end development, UI implementation, and website optimization.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item reveal" data-reveal="up">
+          <div class="timeline__dot"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="timeline__content">
+            <span class="timeline__badge">Sample content — replace me</span>
+            <span class="timeline__date">20th Sep 2026 — 20th Oct 2026</span>
+            <h3>Python Trainee</h3>
+            <p class="timeline__org">CodeAlpha</p>
+            <ul>
+              <li>Practiced Python programming fundamentals, including variables, data types, loops, conditional statements, and functions.
+                  Applied Object-Oriented Programming (OOP) concepts to develop structured and reusable code.
+                  Solved programming exercises and implemented practical Python tasks to strengthen problem-solving skills.</li>
+              <li>Successfully completed hands-on Python training and strengthened my programming fundamentals.
+                  Developed practical experience in writing, testing, and debugging Python code.
+                  Improved my understanding of OOP principles and their application in software development. </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section class="section section--alt" id="certifications">
+    <div class="container">
+      <div class="section__head reveal" data-reveal="up">
+        <p class="section__kicker">— Certifications</p>
+        <h2 class="section__title">Certificates &amp; courses</h2>
+      </div>
+
+      <!--
+        CERTIFICATIONS CUSTOMIZATION:
+        Duplicate a .cert-card to add a certificate. Link "View Certificate"
+        to an image or PDF in assets/images or assets/files.
+      -->
+      <div class="cert__grid">
+        
+
+        <div class="cert-card reveal" data-reveal="up">
+          <i class="fa-solid fa-certificate cert-card__icon"></i>
+          <h3>Python Certificate</h3>
+          <p class="timeline__org">New Horizons</p>
+          <span class="timeline__badge">September 2026 — Python Programming</span>
+          <a href="https://credsverse.com/credentials/2011b8da-a479-4425-ba17-23b914576e03?preview=1" class="cert-card__link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section__head reveal" data-reveal="up">
+        <p class="section__kicker">— Contact</p>
+        <h2 class="section__title">Let's work together</h2>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal" data-reveal="up">
+          <p class="contact__lead">
+            I'm open to internships, junior roles and collaborative projects. The fastest way
+            to reach me is by email.
+          </p>
+          <!-- EDIT: replace with your real contact details -->
+          <a href="saifsaadawy5@gmail.com" class="contact__row">
+            <i class="fa-solid fa-envelope"></i> saifsaadawy5@gamil.com
+          </a>
+          <a href="tel:+201016955559" class="contact__row">
+            <i class="fa-solid fa-phone"></i> +20 1016955559
+          </a>
+          <a href="https://www.linkedin.com/in/saif-saadawi" target="_blank" rel="noopener" class="contact__row">
+            <i class="fa-brands fa-linkedin"></i> linkedin.com/in/saif-saadawi
+          </a>
+          <a href="https://github.com/Saifsaadawy" target="_blank" rel="noopener" class="contact__row">
+            <i class="fa-brands fa-github"></i> github.com/Saifsaadawy
+          </a>
+        </div>
+
+        <form class="contact__form reveal" data-reveal="up" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+            <span class="form-error" id="subjectError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>&copy; <span id="year"></span> Saifallah Ehab Ibrahim. Built with HTML, CSS &amp; JavaScript.</p>
+    <div class="footer__socials">
+      <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
